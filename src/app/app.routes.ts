@@ -9,5 +9,9 @@ export const AppRoutes: Routes = [
   {
     path: 'login',
     loadChildren: './modules/landing-page/landing-page.module#LandingPageModule'
+  },
+  {
+    path: 'dashboard',
+    loadChildren: './modules/dashboard/dashboard.module#DashboardModule'
   }
 ];
