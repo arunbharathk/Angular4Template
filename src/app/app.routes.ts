@@ -3,11 +3,11 @@ import { Routes } from '@angular/router';
 export const AppRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'signup',
     pathMatch: 'full',
   },
   {
-    path: 'login',
+    path: 'signup',
     loadChildren: './modules/landing-page/landing-page.module#LandingPageModule'
   },
   {

@@ -5,8 +5,6 @@ var CRUMINA = {};
 
 	// USE STRICT
 	"use strict";
-
-
 	//----------------------------------------------------/
 	// Predefined Variables
 	//----------------------------------------------------/
@@ -537,6 +535,7 @@ var CRUMINA = {};
 	});
 
 	$(".js-chat-open").on('click', function () {
+        console.log('aaaa');        
 		$('.popup-chat-responsive').toggleClass('open-chat');
 		return false
 	});
