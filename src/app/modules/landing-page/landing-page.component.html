@@ -91,13 +91,13 @@
               <li *ngIf="isShowTab" class="nav-item">
                 <a href="#" class="nav-link">Privacy Policy</a>
               </li>
-              <li *ngIf="isShowTab" class="close-responsive-menu js-close-responsive-menu">
+              <li class="close-responsive-menu js-close-responsive-menu">
                 <svg class="olymp-close-icon">
                   <use xlink:href="../../../assets/icons/icons.svg#olymp-close-icon"></use>
                 </svg>
               </li>
-              <li class="nav-item js-expanded-menu">
-                <a href="#" class="nav-link" (click)="showTabs()">
+              <li class="nav-item js-expanded-menu" (click)="showTabs()">
+                <a class="nav-link">
                   <svg class="olymp-menu-icon">
                     <use xlink:href="../../../assets/icons/icons.svg#olymp-menu-icon"></use>
                   </svg>

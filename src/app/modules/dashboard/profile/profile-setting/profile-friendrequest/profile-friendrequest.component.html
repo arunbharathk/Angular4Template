@@ -1,6 +1,32 @@
 <div class="header-spacer"></div>
 <app-profilesetting-header></app-profilesetting-header>
 
+<!-- Main Header Your Account -->
+
+<div class="main-header">
+  <div class="content-bg-wrap">
+    <div class="content-bg bg-account"></div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 m-auto col-md-8 col-sm-12 col-xs-12">
+        <div class="main-header-content">
+          <h1>Your Account Dashboard</h1>
+          <p>Welcome to your account dashboard! Here you’ll find everything you need to change your profile information, settings,
+            read notifications and requests, view your latest messages, change your pasword and much more! Also you can create
+            or manage your own favourite page, have fun!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <img class="img-bottom" src="../../../../../assets/img/account-bottom.png" alt="friends">
+</div>
+
+<!-- ... end Main Header Your Account -->
+
+
 <!-- Your Account Personal Information -->
 
 <div class="container">
@@ -8,92 +34,158 @@
     <div class="col-xl-9 order-xl-2 col-lg-9 order-lg-2 col-md-12 order-md-1 col-sm-12 col-xs-12">
       <div class="ui-block">
         <div class="ui-block-title">
-          <h6 class="title">Account Settings</h6>
+          <h6 class="title">Friend Requests</h6>
+          <a href="#" class="more">
+            <svg class="olymp-three-dots-icon">
+              <use xlink:href="../../../../../assets/icons/icons.svg#olymp-three-dots-icon"></use>
+            </svg>
+          </a>
         </div>
-        <div class="ui-block-content">
-          <form>
-            <div class="row">
 
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div class="form-group label-floating is-select">
-                  <label class="control-label">Who Can Friend You?</label>
-                  <select class="selectpicker form-control">
-                    <option value="EO">Everyone</option>
-                    <option value="NO">No One</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div class="form-group label-floating is-select">
-                  <label class="control-label">Who Can View Your Posts</label>
-                  <select class="selectpicker form-control">
-                    <option value="US">Friends Only</option>
-                    <option value="EO">Everyone</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="description-toggle">
-                  <div class="description-toggle-content">
-                    <div class="h6">Notifications Sound</div>
-                    <p>A sound will be played each time you receive a new activity notification</p>
-                  </div>
-
-                  <div class="togglebutton">
-                    <label>
-                      <input type="checkbox" checked="">
-                    </label>
-                  </div>
-                </div>
-                <div class="description-toggle">
-                  <div class="description-toggle-content">
-                    <div class="h6">Notifications Email</div>
-                    <p>We’ll send you an email to your account each time you receive a new activity notification</p>
-                  </div>
-
-                  <div class="togglebutton">
-                    <label>
-                      <input type="checkbox" checked="">
-                    </label>
-                  </div>
-                </div>
-                <div class="description-toggle">
-                  <div class="description-toggle-content">
-                    <div class="h6">Friend’s Birthdays</div>
-                    <p>Choose wheather or not receive notifications about your friend’s birthdays on your newsfeed</p>
-                  </div>
-
-                  <div class="togglebutton">
-                    <label>
-                      <input type="checkbox" checked="">
-                    </label>
-                  </div>
-                </div>
-                <div class="description-toggle">
-                  <div class="description-toggle-content">
-                    <div class="h6">Chat Message Sound</div>
-                    <p>A sound will be played each time you receive a new message on an inactive chat window</p>
-                  </div>
-
-                  <div class="togglebutton">
-                    <label>
-                      <input type="checkbox" checked="">
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <button class="btn btn-secondary btn-lg full-width">Restore all Attributes</button>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <button class="btn btn-primary btn-lg full-width">Save all Changes</button>
-              </div>
+        <ul class="notification-list friend-requests">
+          <li>
+            <div class="author-thumb">
+              <img src="../../../../../assets/img/avatar15-sm.jpg" alt="author">
             </div>
-          </form>
-        </div>
+            <div class="notification-event">
+              <a href="#" class="h6 notification-friend">Tamara Romanoff</a>
+              <span class="chat-message-item">Mutual Friend: Sarah Hetfield</span>
+            </div>
+            <span class="notification-icon">
+              <a href="#" class="accept-request">
+                <span class="icon-add">
+                  <svg class="olymp-happy-face-icon">
+                    <use xlink:href="../../../../../assets/icons/icons.svg#olymp-happy-face-icon"></use>
+                  </svg>
+                </span>
+                Accept Friend Request
+              </a>
+
+              <a href="#" class="accept-request request-del">
+                <span class="icon-minus">
+                  <svg class="olymp-happy-face-icon">
+                    <use xlink:href="../../../../../assets/icons/icons.svg#olymp-happy-face-icon"></use>
+                  </svg>
+                </span>
+              </a>
+
+            </span>
+
+            <div class="more">
+              <svg class="olymp-three-dots-icon">
+                <use xlink:href="../../../../../assets/icons/icons.svg#olymp-three-dots-icon"></use>
+              </svg>
+              <svg class="olymp-little-delete">
+                <use xlink:href="../../../../../assets/icons/icons.svg#olymp-little-delete"></use>
+              </svg>
+            </div>
+          </li>
+
+          <li>
+            <div class="author-thumb">
+              <img src="../../../../../assets/img/avatar16-sm.jpg" alt="author">
+            </div>
+            <div class="notification-event">
+              <a href="#" class="h6 notification-friend">Tony Stevens</a>
+              <span class="chat-message-item">4 Friends in Common</span>
+            </div>
+            <span class="notification-icon">
+              <a href="#" class="accept-request">
+                <span class="icon-add">
+                  <svg class="olymp-happy-face-icon">
+                    <use xlink:href="../../../../../assets/icons/icons.svg#olymp-happy-face-icon"></use>
+                  </svg>
+                </span>
+                Accept Friend Request
+              </a>
+
+              <a href="#" class="accept-request request-del">
+                <span class="icon-minus">
+                  <svg class="olymp-happy-face-icon">
+                    <use xlink:href="../../../../../assets/icons/icons.svg#olymp-happy-face-icon"></use>
+                  </svg>
+                </span>
+              </a>
+
+            </span>
+
+            <div class="more">
+              <svg class="olymp-three-dots-icon">
+                <use xlink:href="../../../../../assets/icons/icons.svg#olymp-three-dots-icon"></use>
+              </svg>
+              <svg class="olymp-little-delete">
+                <use xlink:href="../../../../../assets/icons/icons.svg#olymp-little-delete"></use>
+              </svg>
+            </div>
+          </li>
+
+          <li class="accepted">
+            <div class="author-thumb">
+              <img src="../../../../../assets/img/avatar17-sm.jpg" alt="author">
+            </div>
+            <div class="notification-event">
+              You and
+              <a href="#" class="h6 notification-friend">Mary Jane Stark</a> just became friends. Write on
+              <a href="#" class="notification-link">his wall</a>.
+            </div>
+            <span class="notification-icon">
+              <svg class="olymp-happy-face-icon">
+                <use xlink:href="../../../../../assets/icons/icons.svg#olymp-happy-face-icon"></use>
+              </svg>
+            </span>
+
+            <div class="more">
+              <svg class="olymp-three-dots-icon">
+                <use xlink:href="../../../../../assets/icons/icons.svg#olymp-three-dots-icon"></use>
+              </svg>
+              <svg class="olymp-little-delete">
+                <use xlink:href="../../../../../assets/icons/icons.svg#olymp-little-delete"></use>
+              </svg>
+            </div>
+          </li>
+
+          <li>
+            <div class="author-thumb">
+              <img src="../../../../../assets/img/avatar18-sm.jpg" alt="author">
+            </div>
+            <div class="notification-event">
+              <a href="#" class="h6 notification-friend">Stagg Clothing</a>
+              <span class="chat-message-item">9 Friends in Common</span>
+            </div>
+            <span class="notification-icon">
+              <a href="#" class="accept-request">
+                <span class="icon-add">
+                  <svg class="olymp-happy-face-icon">
+                    <use xlink:href="../../../../../assets/icons/icons.svg#olymp-happy-face-icon"></use>
+                  </svg>
+                </span>
+                Accept Friend Request
+              </a>
+
+              <a href="#" class="accept-request request-del">
+                <span class="icon-minus">
+                  <svg class="olymp-happy-face-icon">
+                    <use xlink:href="../../../../../assets/icons/icons.svg#olymp-happy-face-icon"></use>
+                  </svg>
+                </span>
+              </a>
+
+            </span>
+
+            <div class="more">
+              <svg class="olymp-three-dots-icon">
+                <use xlink:href="../../../../../assets/icons/icons.svg#olymp-three-dots-icon"></use>
+              </svg>
+              <svg class="olymp-little-delete">
+                <use xlink:href="../../../../../assets/icons/icons.svg#olymp-little-delete"></use>
+              </svg>
+            </div>
+          </li>
+
+        </ul>
+
       </div>
+
     </div>
 
     <div class="col-xl-3 order-xl-1 col-lg-3 order-lg-1 col-md-12 order-md-2 col-sm-12 col-xs-12 responsive-display-none">

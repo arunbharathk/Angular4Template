@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProfilePageComponent } from './profile-page/profile-page.component';
-import { ProfileSettingComponent } from './profile-setting/profile-setting.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ProfilePageComponent
+    loadChildren: './profile-page/profile-page.module#ProfilePageModule'
   },
   {
     path: 'setting',
-    component: ProfileSettingComponent
+    loadChildren: './profile-setting/profile-setting.module#ProfileSettingModule'
   }
 ];
 

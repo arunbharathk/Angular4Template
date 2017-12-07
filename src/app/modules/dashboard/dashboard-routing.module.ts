@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardComponent } from './dashboard.component';
+import { TypographyComponent } from '../../core/components/typography/typography.component';
 import { NewsFeedComponent } from './news-feed/news-feed.component';
 import { FavPagesFeedComponent } from './fav-pages-feed/fav-pages-feed.component';
 import { FriendGroupsComponent } from './friend-groups/friend-groups.component';
@@ -15,8 +16,12 @@ import { ManageWidgetsComponent } from './manage-widgets/manage-widgets.componen
 
 var routes = [
   {
-    path: '',
-    component: DashboardComponent
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: [{
+      path: '',
+      component: TypographyComponent
+    }]
   },
   {
     path: 'dashboard',
@@ -24,7 +29,7 @@ var routes = [
     children: [{
       path: 'newsfeed',
       component: NewsFeedComponent
-    }]    
+    }]
   },
   {
     path: 'dashboard',
