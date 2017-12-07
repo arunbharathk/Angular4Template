@@ -10,6 +10,12 @@ import { WeatherHeaderComponent } from './components/weather/weather-header/weat
 import { FriendgroupsHeaderComponent } from './components/friend/friendgroups-header/friendgroups-header.component';
 import { MusicplaylistsHeaderComponent } from './components/music/musicplaylists-header/musicplaylists-header.component';
 import { CalendareventsHeaderComponent } from './components/calendar/calendarevents-header/calendarevents-header.component';
+import { CommunitybadgeHeaderComponent } from './components/community/communitybadge-header/communitybadge-header.component';
+import { FriendsbirthdaysHeaderComponent } from './components/friend/friendsbirthdays-header/friendsbirthdays-header.component';
+import { AccountstatsHeaderComponent } from './components/account/accountstats-header/accountstats-header.component';
+import { ManagewidgetsHeaderComponent } from './components/widgets/managewidgets-header/managewidgets-header.component';
+import { ProfilepageHeaderComponent } from './components/profile/profilepage-header/profilepage-header.component';
+import { ProfilesettingHeaderComponent } from './components/profile/profilesetting-header/profilesetting-header.component';
 
 
 @NgModule({
@@ -24,7 +30,13 @@ import { CalendareventsHeaderComponent } from './components/calendar/calendareve
     WeatherHeaderComponent,
     FriendgroupsHeaderComponent,
     MusicplaylistsHeaderComponent,
-    CalendareventsHeaderComponent
+    CalendareventsHeaderComponent,
+    CommunitybadgeHeaderComponent,
+    FriendsbirthdaysHeaderComponent,
+    AccountstatsHeaderComponent,
+    ManagewidgetsHeaderComponent,
+    ProfilepageHeaderComponent,
+    ProfilesettingHeaderComponent
   ],
   exports: [
     HeaderComponent,
@@ -33,7 +45,13 @@ import { CalendareventsHeaderComponent } from './components/calendar/calendareve
     WeatherHeaderComponent,
     FriendgroupsHeaderComponent,
     MusicplaylistsHeaderComponent,
-    CalendareventsHeaderComponent
+    CalendareventsHeaderComponent,
+    CommunitybadgeHeaderComponent,
+    FriendsbirthdaysHeaderComponent,
+    AccountstatsHeaderComponent,
+    ManagewidgetsHeaderComponent,
+    ProfilepageHeaderComponent,
+    ProfilesettingHeaderComponent
   ]
 })
 export class CoreModule { }
