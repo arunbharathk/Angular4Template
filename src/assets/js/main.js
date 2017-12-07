@@ -3,40 +3,39 @@ var CRUMINA = {};
 
 (function ($) {
 
-	// USE STRICT
-	"use strict";
-	//----------------------------------------------------/
-	// Predefined Variables
-	//----------------------------------------------------/
-	var $window = $(window),
-		$document = $(document),
-		$body = $('body'),
-		swipers = {},
-		$progress_bar = $('.skills-item'),
+    // USE STRICT
+    "use strict";
+    //----------------------------------------------------/
+    // Predefined Variables
+    //----------------------------------------------------/
+    var $window = $(window),
+        $document = $(document),
+        $body = $('body'),
+        swipers = {},
+        $progress_bar = $('.skills-item'),
         $sidebar = $('.fixed-sidebar'),
-		$header = $('#header--standard'),
-		$counter = $('.counter');
-
+        $header = $('#header--standard'),
+        $counter = $('.counter');
     /* -----------------------------
      * Equal height elements
      * Script file: theme-plugins.js
      * Documentation about used plugin:
      * http://brm.io/jquery-match-height/
      * ---------------------------*/
-	CRUMINA.equalHeight = function () {
-		$('.js-equal-child').find('.theme-module').matchHeight({
-			property: 'min-height'
-		});
-	};
-
-
-	//Scroll to top.
-        jQuery('.back-to-top').on('click', function () {
-            $('html,body').animate({
-                scrollTop: 0
-            }, 1200);
-            return false;
+    CRUMINA.equalHeight = function () {
+        $('.js-equal-child').find('.theme-module').matchHeight({
+            property: 'min-height'
         });
+    };
+
+
+    //Scroll to top.
+    jQuery('.back-to-top').on('click', function () {
+        $('html,body').animate({
+            scrollTop: 0
+        }, 1200);
+        return false;
+    });
 
 
 	/* -----------------------------
@@ -53,25 +52,25 @@ var CRUMINA = {};
             labelField: 'name',
             searchField: ['name'],
             options: [
-                {image: 'img/avatar30-sm.jpg', name: 'Marie Claire Stevens', message:'12 Friends in Common', icon:'olymp-happy-face-icon'},
-                {image: 'img/avatar54-sm.jpg', name: 'Marie Davidson', message:'4 Friends in Common', icon:'olymp-happy-face-icon'},
-                {image: 'img/avatar49-sm.jpg', name: 'Marina Polson', message:'Mutual Friend: Mathilda Brinker', icon:'olymp-happy-face-icon'},
-                {image: 'img/avatar36-sm.jpg', name: 'Ann Marie Gibson', message:'New York, NY', icon:'olymp-happy-face-icon'},
-                {image: 'img/avatar22-sm.jpg', name: 'Dave Marinara', message:'8 Friends in Common', icon:'olymp-happy-face-icon'},
-                {image: 'img/avatar41-sm.jpg', name: 'The Marina Bar', message:'Restaurant / Bar', icon:'olymp-star-icon'}
+                { image: 'img/avatar30-sm.jpg', name: 'Marie Claire Stevens', message: '12 Friends in Common', icon: 'olymp-happy-face-icon' },
+                { image: 'img/avatar54-sm.jpg', name: 'Marie Davidson', message: '4 Friends in Common', icon: 'olymp-happy-face-icon' },
+                { image: 'img/avatar49-sm.jpg', name: 'Marina Polson', message: 'Mutual Friend: Mathilda Brinker', icon: 'olymp-happy-face-icon' },
+                { image: 'img/avatar36-sm.jpg', name: 'Ann Marie Gibson', message: 'New York, NY', icon: 'olymp-happy-face-icon' },
+                { image: 'img/avatar22-sm.jpg', name: 'Dave Marinara', message: '8 Friends in Common', icon: 'olymp-happy-face-icon' },
+                { image: 'img/avatar41-sm.jpg', name: 'The Marina Bar', message: 'Restaurant / Bar', icon: 'olymp-star-icon' }
             ],
             render: {
-                option: function(item, escape) {
+                option: function (item, escape) {
                     return '<div class="inline-items">' +
                         (item.image ? '<div class="author-thumb"><img src="' + escape(item.image) + '" alt="avatar"></div>' : '') +
-							'<div class="notification-event">' +
-                        		(item.name ? '<span class="h6 notification-friend"></a>' + escape(item.name) + '</span>' : '') +
-                        		(item.message ? '<span class="chat-message-item">' + escape(item.message) + '</span>' : '') +
-							'</div>'+
-                        	(item.icon ? '<span class="notification-icon"><svg class="' + escape(item.icon) + '"><use xlink:href="icons/icons.svg#' + escape(item.icon) + '"></use></svg></span>' : '') +
+                        '<div class="notification-event">' +
+                        (item.name ? '<span class="h6 notification-friend"></a>' + escape(item.name) + '</span>' : '') +
+                        (item.message ? '<span class="chat-message-item">' + escape(item.message) + '</span>' : '') +
+                        '</div>' +
+                        (item.icon ? '<span class="notification-icon"><svg class="' + escape(item.icon) + '"><use xlink:href="icons/icons.svg#' + escape(item.icon) + '"></use></svg></span>' : '') +
                         '</div>';
                 },
-                item: function(item, escape) {
+                item: function (item, escape) {
                     var label = item.name;
                     return '<div>' +
                         '<span class="label">' + escape(label) + '</span>' +
@@ -99,20 +98,20 @@ var CRUMINA = {};
 	 * Fixed Header
 	 * --------------------- */
 
-	CRUMINA.fixedHeader = function () {
-		// grab an element
-		$header.headroom(
-			{
-				"offset": 210,
-				"tolerance": 5,
-				"classes": {
-					"initial": "animated",
-					"pinned": "slideDown",
-					"unpinned": "slideUp"
-				}
-			}
-		);
-	};
+    CRUMINA.fixedHeader = function () {
+        // grab an element
+        $header.headroom(
+            {
+                "offset": 210,
+                "tolerance": 5,
+                "classes": {
+                    "initial": "animated",
+                    "pinned": "slideDown",
+                    "unpinned": "slideUp"
+                }
+            }
+        );
+    };
 
 
 	/* -----------------------
@@ -125,7 +124,7 @@ var CRUMINA = {};
                 jQuery(this).waypoint(function () {
                     $(this.element).find('span').countTo();
                     this.destroy();
-                }, {offset: '95%'});
+                }, { offset: '95%' });
             });
         }
     };
@@ -181,7 +180,7 @@ var CRUMINA = {};
                 $(this).closest('.form-group').addClass('is-focused');
             });
             date_select_field.on('hide.daterangepicker', function () {
-                if ('' === $(this).val()){
+                if ('' === $(this).val()) {
                     $(this).closest('.form-group').removeClass('is-focused');
                 }
             });
@@ -192,18 +191,18 @@ var CRUMINA = {};
 	/* -----------------------------
      * Forms validation added Errors Messages
      * ---------------------------*/
-	CRUMINA.FormValidation = function () {
-		$('.needs-validation').each(function () {
-			var form = $(this)[0];
-			form.addEventListener("submit", function (event) {
-				if (form.checkValidity() == false) {
-					event.preventDefault();
-					event.stopPropagation();
-				}
-				form.classList.add("was-validated");
-			}, false);
-		});
-	};
+    CRUMINA.FormValidation = function () {
+        $('.needs-validation').each(function () {
+            var form = $(this)[0];
+            form.addEventListener("submit", function (event) {
+                if (form.checkValidity() == false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add("was-validated");
+            }, false);
+        });
+    };
 
 
 
@@ -263,75 +262,75 @@ var CRUMINA = {};
      * http://idangero.us/swiper/api/
      * ---------------------------*/
 
-	CRUMINA.initSwiper = function () {
-		var initIterator = 0;
-		var $breakPoints = false;
-		$('.swiper-container').each(function () {
+    CRUMINA.initSwiper = function () {
+        var initIterator = 0;
+        var $breakPoints = false;
+        $('.swiper-container').each(function () {
 
-			var $t = $(this);
-			var index = 'swiper-unique-id-' + initIterator;
+            var $t = $(this);
+            var index = 'swiper-unique-id-' + initIterator;
 
-			$t.addClass('swiper-' + index + ' initialized').attr('id', index);
-			$t.find('.swiper-pagination').addClass('pagination-' + index);
+            $t.addClass('swiper-' + index + ' initialized').attr('id', index);
+            $t.find('.swiper-pagination').addClass('pagination-' + index);
 
-			var $effect = ($t.data('effect')) ? $t.data('effect') : 'slide',
-				$crossfade = ($t.data('crossfade')) ? $t.data('crossfade') : true,
-				$loop = ($t.data('loop') == false) ? $t.data('loop') : true,
-				$showItems = ($t.data('show-items')) ? $t.data('show-items') : 1,
-				$scrollItems = ($t.data('scroll-items')) ? $t.data('scroll-items') : 1,
-				$scrollDirection = ($t.data('direction')) ? $t.data('direction') : 'horizontal',
-				$mouseScroll = ($t.data('mouse-scroll')) ? $t.data('mouse-scroll') : false,
-				$autoplay = ($t.data('autoplay')) ? parseInt($t.data('autoplay'), 10) : 0,
-				$autoheight = ($t.hasClass('auto-height')) ? true: false,
-				$slidesSpace = ($showItems > 1) ? 20 : 0;
+            var $effect = ($t.data('effect')) ? $t.data('effect') : 'slide',
+                $crossfade = ($t.data('crossfade')) ? $t.data('crossfade') : true,
+                $loop = ($t.data('loop') == false) ? $t.data('loop') : true,
+                $showItems = ($t.data('show-items')) ? $t.data('show-items') : 1,
+                $scrollItems = ($t.data('scroll-items')) ? $t.data('scroll-items') : 1,
+                $scrollDirection = ($t.data('direction')) ? $t.data('direction') : 'horizontal',
+                $mouseScroll = ($t.data('mouse-scroll')) ? $t.data('mouse-scroll') : false,
+                $autoplay = ($t.data('autoplay')) ? parseInt($t.data('autoplay'), 10) : 0,
+                $autoheight = ($t.hasClass('auto-height')) ? true : false,
+                $slidesSpace = ($showItems > 1) ? 20 : 0;
 
-			if ($showItems > 1) {
-				$breakPoints = {
-					480: {
-						slidesPerView: 1,
-						slidesPerGroup: 1
-					},
-					768: {
-						slidesPerView: 2,
-						slidesPerGroup: 2
-					}
-				}
-			}
+            if ($showItems > 1) {
+                $breakPoints = {
+                    480: {
+                        slidesPerView: 1,
+                        slidesPerGroup: 1
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        slidesPerGroup: 2
+                    }
+                }
+            }
 
-			swipers['swiper-' + index] = new Swiper('.swiper-' + index, {
-				pagination: '.pagination-' + index,
-				paginationClickable: true,
-				direction: $scrollDirection,
-				mousewheelControl: $mouseScroll,
-				mousewheelReleaseOnEdges: $mouseScroll,
-				slidesPerView: $showItems,
-				slidesPerGroup: $scrollItems,
-				spaceBetween: $slidesSpace,
-				keyboardControl: true,
-				setWrapperSize: true,
-				preloadImages: true,
-				updateOnImagesReady: true,
-				autoplay: $autoplay,
-				autoHeight: $autoheight,
-				loop: $loop,
-				breakpoints: $breakPoints,
-				effect: $effect,
-				fade: {
-					crossFade: $crossfade
-				},
-				parallax: true,
-				onSlideChangeStart: function (swiper) {
-				    var sliderThumbs = $t.siblings('.slider-slides');
-					if (sliderThumbs.length) {
+            swipers['swiper-' + index] = new Swiper('.swiper-' + index, {
+                pagination: '.pagination-' + index,
+                paginationClickable: true,
+                direction: $scrollDirection,
+                mousewheelControl: $mouseScroll,
+                mousewheelReleaseOnEdges: $mouseScroll,
+                slidesPerView: $showItems,
+                slidesPerGroup: $scrollItems,
+                spaceBetween: $slidesSpace,
+                keyboardControl: true,
+                setWrapperSize: true,
+                preloadImages: true,
+                updateOnImagesReady: true,
+                autoplay: $autoplay,
+                autoHeight: $autoheight,
+                loop: $loop,
+                breakpoints: $breakPoints,
+                effect: $effect,
+                fade: {
+                    crossFade: $crossfade
+                },
+                parallax: true,
+                onSlideChangeStart: function (swiper) {
+                    var sliderThumbs = $t.siblings('.slider-slides');
+                    if (sliderThumbs.length) {
                         sliderThumbs.find('.slide-active').removeClass('slide-active');
-						var realIndex = swiper.slides.eq(swiper.activeIndex).attr('data-swiper-slide-index');
+                        var realIndex = swiper.slides.eq(swiper.activeIndex).attr('data-swiper-slide-index');
                         sliderThumbs.find('.slides-item').eq(realIndex).addClass('slide-active');
-					}
-				}
-			});
-			initIterator++;
-		});
-		
+                    }
+                }
+            });
+            initIterator++;
+        });
+
 
         //swiper arrows
         $('.btn-prev').on('click', function () {
@@ -343,7 +342,7 @@ var CRUMINA = {};
             var sliderID = $(this).closest('.slider-slides').siblings('.swiper-container').attr('id');
             swipers['swiper-' + sliderID].slideNext();
         });
-		
+
         //swiper arrows
         $('.btn-prev-without').on('click', function () {
             var sliderID = $(this).closest('.swiper-container').attr('id');
@@ -354,8 +353,8 @@ var CRUMINA = {};
             var sliderID = $(this).closest('.swiper-container').attr('id');
             swipers['swiper-' + sliderID].slideNext();
         });
-		
-		
+
+
         // Click on thumbs
         $('.slider-slides .slides-item').on('click', function () {
             if ($(this).hasClass('slide-active')) return false;
@@ -367,14 +366,14 @@ var CRUMINA = {};
 
             return false;
         });
-	};
+    };
 
-	
+
 	/* -----------------------
 	 * Progress bars Animation
 	 * --------------------- */
     CRUMINA.progresBars = function () {
-        $progress_bar.appear({force_process: true});
+        $progress_bar.appear({ force_process: true });
         $progress_bar.on('appear', function () {
             var current_bar = $(this);
             if (!current_bar.data('inited')) {
@@ -390,53 +389,53 @@ var CRUMINA = {};
    	* --------------------- */
 
     $('.quantity-plus').on('click', function () {
-            var val = parseInt($(this).prev('input').val());
-            $(this).prev('input').val(val + 1).change();
-            return false;
-        });
+        var val = parseInt($(this).prev('input').val());
+        $(this).prev('input').val(val + 1).change();
+        return false;
+    });
 
-        $('.quantity-minus').on('click', function () {
-            var val = parseInt($(this).next('input').val());
-            if (val !== 1) {
-                $(this).next('input').val(val - 1).change();
-            }
-            return false;
-        });
+    $('.quantity-minus').on('click', function () {
+        var val = parseInt($(this).next('input').val());
+        if (val !== 1) {
+            $(this).next('input').val(val - 1).change();
+        }
+        return false;
+    });
 
 
 	/* -----------------------------
 	 * Isotope sorting
 	 * ---------------------------*/
 
-	CRUMINA.IsotopeSort = function () {
-		var $container = $('.sorting-container');
-		$container.each(function () {
-			var $current = $(this);
-			var layout = ($current.data('layout').length) ? $current.data('layout') : 'masonry';
-			$current.isotope({
-				itemSelector: '.sorting-item',
-				layoutMode: layout,
-				percentPosition: true
-			});
+    CRUMINA.IsotopeSort = function () {
+        var $container = $('.sorting-container');
+        $container.each(function () {
+            var $current = $(this);
+            var layout = ($current.data('layout').length) ? $current.data('layout') : 'masonry';
+            $current.isotope({
+                itemSelector: '.sorting-item',
+                layoutMode: layout,
+                percentPosition: true
+            });
 
-			$current.imagesLoaded().progress(function () {
-				$current.isotope('layout');
-			});
+            $current.imagesLoaded().progress(function () {
+                $current.isotope('layout');
+            });
 
-			var $sorting_buttons = $current.siblings('.sorting-menu').find('li');
+            var $sorting_buttons = $current.siblings('.sorting-menu').find('li');
 
-			$sorting_buttons.on('click', function () {
-				if ($(this).hasClass('active')) return false;
-				$(this).parent().find('.active').removeClass('active');
-				$(this).addClass('active');
-				var filterValue = $(this).data('filter');
-				if (typeof filterValue != "undefined") {
-					$current.isotope({filter: filterValue});
-					return false;
-				}
-			});
-		});
-	};
+            $sorting_buttons.on('click', function () {
+                if ($(this).hasClass('active')) return false;
+                $(this).parent().find('.active').removeClass('active');
+                $(this).addClass('active');
+                var filterValue = $(this).data('filter');
+                if (typeof filterValue != "undefined") {
+                    $current.isotope({ filter: filterValue });
+                    return false;
+                }
+            });
+        });
+    };
 
 	/* -----------------------------
 	 * Toggle functions
@@ -444,19 +443,19 @@ var CRUMINA = {};
 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         var target = $(e.target).attr("href"); // activated tab
-        if('#events' === target){
+        if ('#events' === target) {
             $('.fc-state-active').click();
         }
     });
 
-	// Toggle aside panels
-	$(".js-sidebar-open").on('click', function () {
+    // Toggle aside panels
+    $(".js-sidebar-open").on('click', function () {
         $(this).toggleClass('active');
         $(this).closest($sidebar).toggleClass('open');
         return false;
-    } );
+    });
 
-	// Close on "Esc" click
+    // Close on "Esc" click
     $window.keydown(function (eventObject) {
         if (eventObject.which == 27 && $sidebar.is(':visible')) {
             $sidebar.removeClass('open');
@@ -489,10 +488,10 @@ var CRUMINA = {};
         if (eventObject.which == 27) {
             $popup.removeClass('open');
             $body.removeClass('overlay-enable');
-			$('.profile-menu').removeClass('expanded-menu');
-			$('.popup-chat-responsive').removeClass('open-chat');
-			$('.profile-settings-responsive').removeClass('open');
-			$('.header-menu').removeClass('open');
+            $('.profile-menu').removeClass('expanded-menu');
+            $('.popup-chat-responsive').removeClass('open-chat');
+            $('.profile-settings-responsive').removeClass('open');
+            $('.header-menu').removeClass('open');
         }
     });
 
@@ -501,15 +500,15 @@ var CRUMINA = {};
         if (!$(event.target).closest($popup).length) {
             $popup.removeClass('open');
             $body.removeClass('overlay-enable');
-			$('.profile-menu').removeClass('expanded-menu');
-			$('.header-menu').removeClass('open');
+            $('.profile-menu').removeClass('expanded-menu');
+            $('.header-menu').removeClass('open');
         }
     });
 
     // Close active tab on second click.
-    $('[data-toggle=tab]').on('click', function(){
-		/*$body.toggleClass('body--fixed');*/
-        if ($(this).hasClass('active') && $(this).closest('ul').hasClass('mobile-app-tabs')){
+    $('[data-toggle=tab]').on('click', function () {
+        /*$body.toggleClass('body--fixed');*/
+        if ($(this).hasClass('active') && $(this).closest('ul').hasClass('mobile-app-tabs')) {
             $($(this).attr("href")).toggleClass('active');
             $(this).removeClass('active');
             return false;
@@ -524,170 +523,169 @@ var CRUMINA = {};
         return false
     });
 
-	$(".profile-settings-open").on('click', function () {
-		$('.profile-settings-responsive').toggleClass('open');
-		return false
-	});
+    $(".profile-settings-open").on('click', function () {
+        $('.profile-settings-responsive').toggleClass('open');
+        return false
+    });
+    
+    $(".js-expanded-menu").on('click', function () {
+        $('.header-menu').toggleClass('expanded-menu');
+        return false
+    });
 
-	$(".js-expanded-menu").on('click', function () {
-		$('.header-menu').toggleClass('expanded-menu');
-		return false
-	});
-
-	$(".js-chat-open").on('click', function () {
-        console.log('aaaa');        
-		$('.popup-chat-responsive').toggleClass('open-chat');
-		return false
-	});
+    $(".js-chat-open").on('click', function () {
+        $('.popup-chat-responsive').toggleClass('open-chat');
+        return false
+    });
     $(".js-chat-close").on('click', function () {
         $('.popup-chat-responsive').removeClass('open-chat');
         return false
     });
 
-	$(".js-open-responsive-menu").on('click', function () {
-		$('.header-menu').toggleClass('open');
-		return false
-	});
+    $(".js-open-responsive-menu").on('click', function () {
+        $('.header-menu').toggleClass('open');
+        return false
+    });
 
-	$(".js-close-responsive-menu").on('click', function () {
-		$('.header-menu').removeClass('open');
-		return false
-	});
+    $(".js-close-responsive-menu").on('click', function () {
+        $('.header-menu').removeClass('open');
+        return false
+    });
 
 
-/* -----------------------------
-     * Scrollmagic scenes animation
-     * ---------------------------*/
+    /* -----------------------------
+         * Scrollmagic scenes animation
+         * ---------------------------*/
 
     CRUMINA.CallToActionAnimation = function () {
         var controller = new ScrollMagic.Controller();
 
-      new ScrollMagic.Scene({triggerElement: ".call-to-action-animation"})
-           .setVelocity(".first-img", {opacity: 1, bottom: "0", scale: "1"}, 1200)
-           .triggerHook(1)
-           .addTo(controller);
+        new ScrollMagic.Scene({ triggerElement: ".call-to-action-animation" })
+            .setVelocity(".first-img", { opacity: 1, bottom: "0", scale: "1" }, 1200)
+            .triggerHook(1)
+            .addTo(controller);
 
-      new ScrollMagic.Scene({triggerElement: ".call-to-action-animation"})
-           .setVelocity(".second-img", {opacity: 1, bottom: "50%", right: "40%"}, 1500)
-           .triggerHook(1)
-           .addTo(controller);
+        new ScrollMagic.Scene({ triggerElement: ".call-to-action-animation" })
+            .setVelocity(".second-img", { opacity: 1, bottom: "50%", right: "40%" }, 1500)
+            .triggerHook(1)
+            .addTo(controller);
     };
 
     CRUMINA.ImgScaleAnimation = function () {
-            var controller = new ScrollMagic.Controller();
+        var controller = new ScrollMagic.Controller();
 
-          new ScrollMagic.Scene({triggerElement: ".img-scale-animation"})
-               .setVelocity(".main-img", {opacity: 1, scale: "1"}, 200)
-               .triggerHook(0.3)
-               .addTo(controller);
+        new ScrollMagic.Scene({ triggerElement: ".img-scale-animation" })
+            .setVelocity(".main-img", { opacity: 1, scale: "1" }, 200)
+            .triggerHook(0.3)
+            .addTo(controller);
 
-          new ScrollMagic.Scene({triggerElement: ".img-scale-animation"})
-               .setVelocity(".first-img1", {opacity: 1, scale: "1"}, 1200)
-               .triggerHook(0.8)
-               .addTo(controller);
+        new ScrollMagic.Scene({ triggerElement: ".img-scale-animation" })
+            .setVelocity(".first-img1", { opacity: 1, scale: "1" }, 1200)
+            .triggerHook(0.8)
+            .addTo(controller);
 
-          new ScrollMagic.Scene({triggerElement: ".img-scale-animation"})
-               .setVelocity(".second-img1", {opacity: 1, scale: "1"}, 1200)
-               .triggerHook(1.1)
-               .addTo(controller);
+        new ScrollMagic.Scene({ triggerElement: ".img-scale-animation" })
+            .setVelocity(".second-img1", { opacity: 1, scale: "1" }, 1200)
+            .triggerHook(1.1)
+            .addTo(controller);
 
-          new ScrollMagic.Scene({triggerElement: ".img-scale-animation"})
-                  .setVelocity(".third-img1", {opacity: 1, scale: "1"}, 1200)
-                  .triggerHook(1.4)
-                  .addTo(controller);
-        };
+        new ScrollMagic.Scene({ triggerElement: ".img-scale-animation" })
+            .setVelocity(".third-img1", { opacity: 1, scale: "1" }, 1200)
+            .triggerHook(1.4)
+            .addTo(controller);
+    };
 
-        CRUMINA.SubscribeAnimation = function () {
-                var controller = new ScrollMagic.Controller();
+    CRUMINA.SubscribeAnimation = function () {
+        var controller = new ScrollMagic.Controller();
 
-              new ScrollMagic.Scene({triggerElement: ".subscribe-animation"})
-                   .setVelocity(".plane", {opacity: 1, bottom: "auto", top: "-20", left: "50%", scale: "1"}, 1200)
-                   .triggerHook(1)
-                   .addTo(controller);
+        new ScrollMagic.Scene({ triggerElement: ".subscribe-animation" })
+            .setVelocity(".plane", { opacity: 1, bottom: "auto", top: "-20", left: "50%", scale: "1" }, 1200)
+            .triggerHook(1)
+            .addTo(controller);
 
-            };
+    };
 
-        CRUMINA.PlanerAnimation = function () {
-                var controller = new ScrollMagic.Controller();
+    CRUMINA.PlanerAnimation = function () {
+        var controller = new ScrollMagic.Controller();
 
-                new ScrollMagic.Scene({triggerElement: ".planer-animation"})
-                      .setVelocity(".planer", {opacity: 1, left: "80%", scale: "1"}, 2000)
-                      .triggerHook(0.1)
-                      .addTo(controller);
+        new ScrollMagic.Scene({ triggerElement: ".planer-animation" })
+            .setVelocity(".planer", { opacity: 1, left: "80%", scale: "1" }, 2000)
+            .triggerHook(0.1)
+            .addTo(controller);
 
-           };
+    };
 
-           CRUMINA.ContactAnimationAnimation = function () {
-                           var controller = new ScrollMagic.Controller();
+    CRUMINA.ContactAnimationAnimation = function () {
+        var controller = new ScrollMagic.Controller();
 
-                           new ScrollMagic.Scene({triggerElement: ".contact-form-animation"})
-                                 .setVelocity(".crew", {opacity: 1, left: "77%", scale: "1"}, 1000)
-                                 .triggerHook(0.1)
-                                 .addTo(controller);
+        new ScrollMagic.Scene({ triggerElement: ".contact-form-animation" })
+            .setVelocity(".crew", { opacity: 1, left: "77%", scale: "1" }, 1000)
+            .triggerHook(0.1)
+            .addTo(controller);
 
-                      };
+    };
 
 
-	
-		/* -----------------------------
-	 * On DOM ready functions
-	 * ---------------------------*/
 
-	$document.ready(function () {
+    /* -----------------------------
+ * On DOM ready functions
+ * ---------------------------*/
+
+    $document.ready(function () {
         CRUMINA.Bootstrap();
         CRUMINA.Materialize();
         CRUMINA.initSwiper();
         CRUMINA.progresBars();
-		CRUMINA.IsotopeSort();
-		CRUMINA.fixedHeader();
-		CRUMINA.counters();
-		CRUMINA.FormValidation();
+        CRUMINA.IsotopeSort();
+        CRUMINA.fixedHeader();
+        CRUMINA.counters();
+        CRUMINA.FormValidation();
 
 
-		// Row background animation
-                if ($('.call-to-action-animation').length) {
-                    CRUMINA.CallToActionAnimation();
-                }
+        // Row background animation
+        if ($('.call-to-action-animation').length) {
+            CRUMINA.CallToActionAnimation();
+        }
 
-                if ($('.img-scale-animation').length) {
-					CRUMINA.ImgScaleAnimation()
-				}
+        if ($('.img-scale-animation').length) {
+            CRUMINA.ImgScaleAnimation()
+        }
 
-				if ($('.subscribe-animation').length) {
-					CRUMINA.SubscribeAnimation()
-				}
+        if ($('.subscribe-animation').length) {
+            CRUMINA.SubscribeAnimation()
+        }
 
-				if ($('.planer-animation').length) {
-					CRUMINA.PlanerAnimation()
-				}
+        if ($('.planer-animation').length) {
+            CRUMINA.PlanerAnimation()
+        }
 
-				if ($('.contact-form-animation').length) {
-                	CRUMINA.ContactAnimationAnimation()
-           		}
+        if ($('.contact-form-animation').length) {
+            CRUMINA.ContactAnimationAnimation()
+        }
 
 
 
 
         // Run scripts only if they included on page.
 
-        if (typeof $.fn.selectize !== 'undefined'){
+        if (typeof $.fn.selectize !== 'undefined') {
             CRUMINA.TopSearch();
-        }if (typeof $.fn.matchHeight !== 'undefined'){
+        } if (typeof $.fn.matchHeight !== 'undefined') {
             CRUMINA.equalHeight();
         }
-        if (typeof $.fn.magnificPopup !== 'undefined'){
+        if (typeof $.fn.magnificPopup !== 'undefined') {
             CRUMINA.mediaPopups();
         }
-        if (typeof $.fn.gifplayer !== 'undefined'){
+        if (typeof $.fn.gifplayer !== 'undefined') {
             $('.gif-play-image').gifplayer();
         }
-        if (typeof $.fn.mediaelementplayer !== 'undefined'){
+        if (typeof $.fn.mediaelementplayer !== 'undefined') {
             $('#mediaplayer').mediaelementplayer({
                 "features": ['prevtrack', 'playpause', 'nexttrack', 'loop', 'shuffle', 'current', 'progress', 'duration', 'volume']
             });
         }
 
-        $('.mCustomScrollbar').perfectScrollbar({wheelPropagation:false});
+        $('.mCustomScrollbar').perfectScrollbar({ wheelPropagation: false });
 
-	});
+    });
 })(jQuery);

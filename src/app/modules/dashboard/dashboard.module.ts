@@ -1,24 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CoreModule } from '../../core/core.module'
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { NewsFeedModule } from './news-feed/news-feed.module';
+
 import { DashboardComponent } from './dashboard.component';
-import { HeaderComponent } from '../../core/layout/header/header.component';
-import { SidebarLeftComponent } from '../../core/layout/sidebar-left/sidebar-left.component';
-import { SidebarRightComponent } from '../../core/layout/sidebar-right/sidebar-right.component';
 import { TypographyComponent } from '../../core/components/typography/typography.component';
-import { CoreModule } from '../../core/core.module';
 
 @NgModule({
   imports: [
     CommonModule,
+    CoreModule,
     DashboardRoutingModule,
+    NewsFeedModule
   ],
   declarations: [
     DashboardComponent,
-    SidebarLeftComponent,
-    HeaderComponent,
-    SidebarRightComponent,
     TypographyComponent
+  ],
+  exports: [
+    CoreModule
   ]
 })
 export class DashboardModule { }

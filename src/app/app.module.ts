@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
 import { CoreModule } from './core/core.module';
-
+import { LandingPageModule } from './modules/landing-page/landing-page.module';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +13,9 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    LandingPageModule,
+    DashboardModule
   ],
   exports: [
     AppComponent    

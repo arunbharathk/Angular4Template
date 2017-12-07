@@ -709,8 +709,7 @@
       visibility: visible; }
   .header--standard-landing .header-menu .nav-item {
     display: block;
-    visibility: hidden;
-    opacity: 0; }
+  }
   .header--standard-landing .header-menu .nav-item a, .header--standard-landing .header-menu li a {
     color: #fff;
     fill: #fff;

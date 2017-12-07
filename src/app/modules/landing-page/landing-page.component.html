@@ -22,10 +22,10 @@
         <div class="nav nav-pills nav1 header-menu">
           <div class="mCustomScrollbar">
             <ul>
-              <li class="nav-item">
+              <li *ngIf="isShowTab" class="nav-item">
                 <a href="#" class="nav-link">Home</a>
               </li>
-              <li class="nav-item dropdown">
+              <li *ngIf="isShowTab" class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
                   aria-expanded="false" tabindex='1'>Profile</a>
                 <div class="dropdown-menu">
@@ -34,7 +34,7 @@
                   <a class="dropdown-item" href="#">Post Versions</a>
                 </div>
               </li>
-              <li class="nav-item dropdown dropdown-has-megamenu">
+              <li *ngIf="isShowTab" class="nav-item dropdown dropdown-has-megamenu">
                 <a href="#" class="nav-link dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="false"
                   aria-expanded="false" tabindex='1'>Forums</a>
                 <div class="dropdown-menu megamenu">
@@ -82,22 +82,22 @@
                   </div>
                 </div>
               </li>
-              <li class="nav-item">
+              <li *ngIf="isShowTab" class="nav-item">
                 <a href="#" class="nav-link">Terms & Conditions</a>
               </li>
-              <li class="nav-item">
+              <li *ngIf="isShowTab" class="nav-item">
                 <a href="#" class="nav-link">Events</a>
               </li>
-              <li class="nav-item">
+              <li *ngIf="isShowTab" class="nav-item">
                 <a href="#" class="nav-link">Privacy Policy</a>
               </li>
-              <li class="close-responsive-menu js-close-responsive-menu">
+              <li *ngIf="isShowTab" class="close-responsive-menu js-close-responsive-menu">
                 <svg class="olymp-close-icon">
                   <use xlink:href="../../../assets/icons/icons.svg#olymp-close-icon"></use>
                 </svg>
               </li>
               <li class="nav-item js-expanded-menu">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" (click)="showTabs()">
                   <svg class="olymp-menu-icon">
                     <use xlink:href="../../../assets/icons/icons.svg#olymp-menu-icon"></use>
                   </svg>
@@ -292,7 +292,7 @@
                       </div>
                     </div>
 
-                    <a href="#" class="btn btn-purple btn-lg full-width">Complete Registration!</a>
+                    <a href="/dashboard" class="btn btn-purple btn-lg full-width">Complete Registration!</a>
                   </div>
                 </div>
               </form>

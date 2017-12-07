@@ -2,16 +2,26 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { DashboardModule } from '../modules/dashboard/dashboard.module';
-import { LandingPageModule } from '../modules/landing-page/landing-page.module';
+
+import { HeaderComponent } from './layout/header/header.component';
+import { SidebarLeftComponent } from './layout/sidebar-left/sidebar-left.component';
+import { SidebarRightComponent } from './layout/sidebar-right/sidebar-right.component';
+
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule,
-    LandingPageModule,
-    DashboardModule
+    RouterModule
   ],
-  declarations: []
+  declarations: [
+    HeaderComponent,
+    SidebarLeftComponent,
+    SidebarRightComponent
+  ],
+  exports: [
+    HeaderComponent,
+    SidebarLeftComponent,
+    SidebarRightComponent
+  ]
 })
 export class CoreModule { }

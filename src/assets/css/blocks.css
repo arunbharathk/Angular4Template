@@ -1162,7 +1162,8 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
       display: block; }
   .fixed-sidebar-left.sidebar--large {
     width: 270px;
-    transform: translateX(-100%); }
+    /*transform: translateX(-100%);*/ 
+  }
 
 .sidebar--large .logo img {
   margin-right: 20px; }

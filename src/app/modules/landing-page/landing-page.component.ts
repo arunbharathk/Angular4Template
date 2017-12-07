@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
-
+  private isShowTab: boolean = false;
+  
   constructor() { }
 
   ngOnInit() {
   }
 
+  private showTabs(): any {
+    this.isShowTab = ! this.isShowTab;
+  }
 }
