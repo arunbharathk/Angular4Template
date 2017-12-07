@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CoreModule } from '../../../core/core.module'
-import { NewsFeedRoutingModule } from './news-feed-routing.module';
 
-import { NewsFeedComponent } from './news-feed.component';
+import { WeatherAppRoutingModule } from './weather-app-routing.module';
+import { WeatherAppComponent } from './weather-app.component';
 
 @NgModule({
   imports: [
     CommonModule,
     CoreModule,
-    NewsFeedRoutingModule
+    WeatherAppRoutingModule
   ],
   declarations: [
-    NewsFeedComponent
+    WeatherAppComponent
   ]
 })
-export class NewsFeedModule { }
+export class WeatherAppModule { }

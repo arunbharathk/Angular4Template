@@ -1,0 +1,686 @@
+<app-sidebar-left></app-sidebar-left>
+<app-sidebar-right></app-sidebar-right>
+<app-header></app-header>
+<div class="header-spacer"></div>
+<app-weather-header></app-weather-header>
+<!-- Widget Weather -->
+
+<!-- Widget Weather -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xl-9 order-xl-2 col-lg-12 order-lg-1 col-md-12 col-sm-12 col-xs-12">
+      <div class="ui-block">
+        <div class="ui-block-title">
+          <h6 class="title">Widget Preview</h6>
+        </div>
+        <div class="ui-block-content">
+          <form>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <fieldset class="form-group label-floating is-select">
+                  <label class="control-label">Country and Timezone</label>
+                  <select class="selectpicker form-control">
+                    <option value="AL">United States (UTC-8)</option>
+                    <option value="2">Ontario (UTC−6)</option>
+                    <option value="WY">Alberta (UTC−6)</option>
+                  </select>
+                </fieldset>
+
+                <fieldset class="form-group label-floating is-select">
+                  <label class="control-label">Extended Forecast Days</label>
+                  <select class="selectpicker form-control">
+                    <option value="AL">Show Next 7 days</option>
+                    <option value="2">Show Next 10 days</option>
+                    <option value="WY">Show Next 14 days</option>
+                  </select>
+                </fieldset>
+
+                <a href="#" class="btn btn-secondary btn-md full-width">Restore all Attributes</a>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <fieldset class="form-group label-floating is-select">
+                  <label class="control-label">Temperature Unit</label>
+                  <select class="selectpicker form-control">
+                    <option value="AL">F° (Farenheit)</option>
+                    <option value="2">C° (Celsius)</option>
+                  </select>
+                </fieldset>
+
+                <div class="switcher-block">
+                  <div class="h6 title">Show Extended Forecast on Widget</div>
+                  <div class="togglebutton blue">
+                    <label>
+                      <input type="checkbox" checked="">
+                    </label>
+                  </div>
+                </div>
+
+                <a href="#" class="btn btn-blue btn-md full-width">Save all Changes</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="ui-block">
+        <div class="ui-block-title">
+          <h6 class="title">Extended Forecast</h6>
+        </div>
+
+        <div class="swiper-container pagination-bottom" data-slide="fade">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-weather" data-swiper-parallax="-500">
+              <div class="day-wethear-item" data-mh="wethear-item">
+                <div class="title">Tomorrow</div>
+
+                <svg class="olymp-weather-sunny-icon icon">
+                  <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-sunny-icon"></use>
+                </svg>
+
+                <div class="wethear-now">
+                  <div class="temperature-sensor">60°</div>
+                  <div class="max-min-temperature">
+                    <span>55°</span>
+                    <span class="high">69°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-wethear-item" data-mh="wethear-item">
+                <div class="title">Monday 28</div>
+                <svg class="olymp-weather-wind-icon-header icon">
+                  <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-wind-icon-header"></use>
+                </svg>
+
+                <div class="wethear-now">
+                  <div class="temperature-sensor">58°</div>
+                  <div class="max-min-temperature">
+                    <span>52°</span>
+                    <span class="high">64°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-wethear-item" data-mh="wethear-item">
+                <div class="title">Tuesday 29</div>
+
+                <svg class="olymp-weather-cloudy-icon icon">
+                  <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-cloudy-icon"></use>
+                </svg>
+
+                <div class="wethear-now">
+                  <div class="temperature-sensor">67°</div>
+                  <div class="max-min-temperature">
+                    <span>62°</span>
+                    <span class="high">77°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-wethear-item" data-mh="wethear-item">
+                <div class="title">Wednesday 30</div>
+                <svg class="olymp-weather-rain-icon icon">
+                  <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-rain-icon"></use>
+                </svg>
+                <div class="wethear-now">
+                  <div class="temperature-sensor">70°</div>
+                  <div class="max-min-temperature">
+                    <span>65°</span>
+                    <span class="high">82°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-wethear-item" data-mh="wethear-item">
+                <div class="title">Thursday 31</div>
+                <svg class="olymp-weather-storm-icon icon">
+                  <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-storm-icon"></use>
+                </svg>
+
+                <div class="wethear-now">
+                  <div class="temperature-sensor">73°</div>
+                  <div class="max-min-temperature">
+                    <span>68°</span>
+                    <span class="high">79°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-wethear-item" data-mh="wethear-item">
+                <div class="title">Friday 1</div>
+                <svg class="olymp-weather-snow-icon icon">
+                  <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-snow-icon"></use>
+                </svg>
+
+                <div class="wethear-now">
+                  <div class="temperature-sensor">68°</div>
+                  <div class="max-min-temperature">
+                    <span>56°</span>
+                    <span class="high">69°</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-weather" data-swiper-parallax="-500">
+              <div class="day-wethear-item" data-mh="wethear-item">
+                <div class="title">Tomorrow</div>
+
+                <svg class="olymp-weather-sunny-icon icon">
+                  <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-sunny-icon"></use>
+                </svg>
+
+                <div class="wethear-now">
+                  <div class="temperature-sensor">60°</div>
+                  <div class="max-min-temperature">
+                    <span>55°</span>
+                    <span class="high">69°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-wethear-item" data-mh="wethear-item">
+                <div class="title">Monday 28</div>
+                <svg class="olymp-weather-wind-icon-header icon">
+                  <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-wind-icon-header"></use>
+                </svg>
+
+                <div class="wethear-now">
+                  <div class="temperature-sensor">58°</div>
+                  <div class="max-min-temperature">
+                    <span>52°</span>
+                    <span class="high">64°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-wethear-item" data-mh="wethear-item">
+                <div class="title">Tuesday 29</div>
+
+                <svg class="olymp-weather-cloudy-icon icon">
+                  <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-cloudy-icon"></use>
+                </svg>
+
+                <div class="wethear-now">
+                  <div class="temperature-sensor">67°</div>
+                  <div class="max-min-temperature">
+                    <span>62°</span>
+                    <span class="high">77°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-wethear-item" data-mh="wethear-item">
+                <div class="title">Wednesday 30</div>
+                <svg class="olymp-weather-rain-icon icon">
+                  <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-rain-icon"></use>
+                </svg>
+                <div class="wethear-now">
+                  <div class="temperature-sensor">70°</div>
+                  <div class="max-min-temperature">
+                    <span>65°</span>
+                    <span class="high">82°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-wethear-item" data-mh="wethear-item">
+                <div class="title">Thursday 31</div>
+                <svg class="olymp-weather-storm-icon icon">
+                  <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-storm-icon"></use>
+                </svg>
+
+                <div class="wethear-now">
+                  <div class="temperature-sensor">73°</div>
+                  <div class="max-min-temperature">
+                    <span>68°</span>
+                    <span class="high">79°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-wethear-item" data-mh="wethear-item">
+                <div class="title">Friday 1</div>
+                <svg class="olymp-weather-snow-icon icon">
+                  <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-snow-icon"></use>
+                </svg>
+
+                <div class="wethear-now">
+                  <div class="temperature-sensor">68°</div>
+                  <div class="max-min-temperature">
+                    <span>56°</span>
+                    <span class="high">69°</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-weather" data-swiper-parallax="-500">
+              <div class="day-wethear-item" data-mh="wethear-item">
+                <div class="title">Tomorrow</div>
+
+                <svg class="olymp-weather-sunny-icon icon">
+                  <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-sunny-icon"></use>
+                </svg>
+
+                <div class="wethear-now">
+                  <div class="temperature-sensor">60°</div>
+                  <div class="max-min-temperature">
+                    <span>55°</span>
+                    <span class="high">69°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-wethear-item" data-mh="wethear-item">
+                <div class="title">Monday 28</div>
+                <svg class="olymp-weather-wind-icon-header icon">
+                  <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-wind-icon-header"></use>
+                </svg>
+
+                <div class="wethear-now">
+                  <div class="temperature-sensor">58°</div>
+                  <div class="max-min-temperature">
+                    <span>52°</span>
+                    <span class="high">64°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-wethear-item" data-mh="wethear-item">
+                <div class="title">Tuesday 29</div>
+
+                <svg class="olymp-weather-cloudy-icon icon">
+                  <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-cloudy-icon"></use>
+                </svg>
+
+                <div class="wethear-now">
+                  <div class="temperature-sensor">67°</div>
+                  <div class="max-min-temperature">
+                    <span>62°</span>
+                    <span class="high">77°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-wethear-item" data-mh="wethear-item">
+                <div class="title">Wednesday 30</div>
+                <svg class="olymp-weather-rain-icon icon">
+                  <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-rain-icon"></use>
+                </svg>
+                <div class="wethear-now">
+                  <div class="temperature-sensor">70°</div>
+                  <div class="max-min-temperature">
+                    <span>65°</span>
+                    <span class="high">82°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-wethear-item" data-mh="wethear-item">
+                <div class="title">Thursday 31</div>
+                <svg class="olymp-weather-storm-icon icon">
+                  <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-storm-icon"></use>
+                </svg>
+
+                <div class="wethear-now">
+                  <div class="temperature-sensor">73°</div>
+                  <div class="max-min-temperature">
+                    <span>68°</span>
+                    <span class="high">79°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-wethear-item" data-mh="wethear-item">
+                <div class="title">Friday 1</div>
+                <svg class="olymp-weather-snow-icon icon">
+                  <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-snow-icon"></use>
+                </svg>
+
+                <div class="wethear-now">
+                  <div class="temperature-sensor">68°</div>
+                  <div class="max-min-temperature">
+                    <span>56°</span>
+                    <span class="high">69°</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- If we need pagination -->
+          <div class="swiper-pagination pagination-blue"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-xl-3 order-xl-1 col-lg-12 order-lg-2 col-md-12 col-sm-12 col-xs-12">
+      <div class="ui-block">
+        <div class="ui-block-title">
+          <h6 class="title">Widget Preview</h6>
+        </div>
+        <div class="widget w-wethear">
+          <a href="#" class="more">
+            <svg class="olymp-three-dots-icon">
+              <use xlink:href="../../../../assets/icons/icons.svg#olymp-three-dots-icon"></use>
+            </svg>
+          </a>
+
+          <div class="wethear-now inline-items">
+            <div class="temperature-sensor">64°</div>
+            <div class="max-min-temperature">
+              <span>58°</span>
+              <span>76°</span>
+            </div>
+
+            <svg class="olymp-weather-partly-sunny-icon">
+              <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-partly-sunny-icon"></use>
+            </svg>
+          </div>
+
+          <div class="wethear-now-description">
+            <div class="climate">Partly Sunny</div>
+            <span>Real Feel:
+              <span>67°</span>
+            </span>
+            <span>Chance of Rain:
+              <span>49%</span>
+            </span>
+          </div>
+
+          <ul class="weekly-forecast">
+
+            <li>
+              <div class="day">sun</div>
+              <svg class="olymp-weather-sunny-icon">
+                <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-sunny-icon"></use>
+              </svg>
+
+              <div class="temperature-sensor-day">60°</div>
+            </li>
+
+            <li>
+              <div class="day">mon</div>
+              <svg class="olymp-weather-partly-sunny-icon">
+                <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-partly-sunny-icon"></use>
+              </svg>
+              <div class="temperature-sensor-day">58°</div>
+            </li>
+
+            <li>
+              <div class="day">tue</div>
+              <svg class="olymp-weather-cloudy-icon">
+                <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-cloudy-icon"></use>
+              </svg>
+
+              <div class="temperature-sensor-day">67°</div>
+            </li>
+
+            <li>
+              <div class="day">wed</div>
+              <svg class="olymp-weather-rain-icon">
+                <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-rain-icon"></use>
+              </svg>
+
+              <div class="temperature-sensor-day">70°</div>
+            </li>
+
+            <li>
+              <div class="day">thu</div>
+              <svg class="olymp-weather-storm-icon">
+                <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-storm-icon"></use>
+              </svg>
+
+              <div class="temperature-sensor-day">58°</div>
+            </li>
+
+            <li>
+              <div class="day">fri</div>
+              <svg class="olymp-weather-snow-icon">
+                <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-snow-icon"></use>
+              </svg>
+
+              <div class="temperature-sensor-day">68°</div>
+            </li>
+
+            <li>
+              <div class="day">sat</div>
+
+              <svg class="olymp-weather-wind-icon-header">
+                <use xlink:href="../../../../assets/icons/icons-weather.svg#olymp-weather-wind-icon-header"></use>
+              </svg>
+
+              <div class="temperature-sensor-day">65°</div>
+            </li>
+
+          </ul>
+
+          <div class="date-and-place">
+            <h5 class="date">Saturday, March 26th</h5>
+            <div class="place">San Francisco, CA</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ... end Widget Weather -->
+
+
+<!-- Window-popup-CHAT for responsive min-width: 768px -->
+
+<div class="ui-block popup-chat popup-chat-responsive">
+  <div class="ui-block-title">
+    <span class="icon-status online"></span>
+    <h6 class="title">Chat</h6>
+    <div class="more">
+      <svg class="olymp-three-dots-icon">
+        <use xlink:href="../../../../assets/icons/icons.svg#olymp-three-dots-icon"></use>
+      </svg>
+      <svg class="olymp-little-delete js-chat-open">
+        <use xlink:href="../../../../assets/icons/icons.svg#olymp-little-delete"></use>
+      </svg>
+    </div>
+  </div>
+  <div class="mCustomScrollbar">
+    <ul class="notification-list chat-message chat-message-field">
+      <li>
+        <div class="author-thumb">
+          <img src="../../../../assets/img/avatar14-sm.jpg" alt="author" class="mCS_img_loaded">
+        </div>
+        <div class="notification-event">
+          <span class="chat-message-item">Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get the
+            drinks</span>
+          <span class="notification-date">
+            <time class="entry-date updated" datetime="2004-07-24T18:18">Yesterday at 8:10pm</time>
+          </span>
+        </div>
+      </li>
+
+      <li>
+        <div class="author-thumb">
+          <img src="../../../../assets/img/author-page.jpg" alt="author" class="mCS_img_loaded">
+        </div>
+        <div class="notification-event">
+          <span class="chat-message-item">Don’t worry Mathilda!</span>
+          <span class="chat-message-item">I already bought everything</span>
+          <span class="notification-date">
+            <time class="entry-date updated" datetime="2004-07-24T18:18">Yesterday at 8:29pm</time>
+          </span>
+        </div>
+      </li>
+
+      <li>
+        <div class="author-thumb">
+          <img src="../../../../assets/img/avatar14-sm.jpg" alt="author" class="mCS_img_loaded">
+        </div>
+        <div class="notification-event">
+          <span class="chat-message-item">Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get the
+            drinks</span>
+          <span class="notification-date">
+            <time class="entry-date updated" datetime="2004-07-24T18:18">Yesterday at 8:10pm</time>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <form>
+
+    <div class="form-group label-floating is-empty">
+      <label class="control-label">Press enter to post...</label>
+      <textarea class="form-control" placeholder=""></textarea>
+      <div class="add-options-message">
+        <a href="#" class="options-message">
+          <svg class="olymp-computer-icon">
+            <use xlink:href="../../../../assets/icons/icons.svg#olymp-computer-icon"></use>
+          </svg>
+        </a>
+        <div class="options-message smile-block">
+
+          <svg class="olymp-happy-sticker-icon">
+            <use xlink:href="../../../../assets/icons/icons.svg#olymp-happy-sticker-icon"></use>
+          </svg>
+
+          <ul class="more-dropdown more-with-triangle triangle-bottom-right">
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat1.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat2.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat3.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat4.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat5.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat6.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat7.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat8.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat9.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat10.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat11.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat12.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat13.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat14.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat15.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat16.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat17.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat18.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat19.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat20.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat21.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat22.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat23.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat24.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat25.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat26.png" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../../../assets/img/icon-chat27.png" alt="icon">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </form>
+
+
+</div>
+
+<!-- ... end Window-popup-CHAT for responsive min-width: 768px -->
+
+
+<a class="back-to-top" href="#">
+  <img src="../../../../assets/icons/back-to-top.svg" alt="arrow" class="back-icon">
+</a>
